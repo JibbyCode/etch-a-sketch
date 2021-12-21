@@ -1,0 +1,27 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#clear{
+    justify-content: center;
+}
+
+#grid-container{
+    border: 1px solid black;
+    height: 540px;
+    width: 550px;
+    margin: 30px 0 40px 28%;
+    display: grid;
+    box-sizing: content-box;
+
+}
+
+
+.cell{
+    border: 1px solid black;
+}
+
+
+
