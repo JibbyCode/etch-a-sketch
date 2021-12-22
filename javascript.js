@@ -27,9 +27,29 @@ function newGrid(cellsPerSide){
 
 function sketch(){
     let box = document.querySelectorAll('.cell');
-    for(let i=0; box.length; i++){
-        box[i].style.backgroundColor = "black";
+    for(let i=0; i <box.length; i++){
+        box[i].addEventListener('mouseover', function(){
+            this.style.backgroundColor = "black";
+        });
     }
 }
+
+
+
+
+
+document.getElementById('clear').addEventListener('click', function(){
+    let newSize = prompt("What size would you like to see? (MAX: 100)");
+    if(parseInt(newSize) >100 && parseInt(newSize) < 1){
+        alert("Not a valid number, Please clear again");
+    }
+    else if(parseInt(newSize) < 100 && parseInt(newSize) > 0){
+        cellsPerSide = newSize;
+        newGrid(cellsPerSide);
+    }
+    else{
+        alert("Not a valid number, Please clear again");
+    }
+});
 
 newGrid(cellsPerSide);
